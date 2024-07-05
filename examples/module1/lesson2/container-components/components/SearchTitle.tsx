@@ -1,5 +1,8 @@
-function SearchTitle() {
-  return <h1 className="text-2xl">Wyszukiwarka postaci Rick and Morty</h1>;
+type SearchTitleProps = {
+  title?: string
 }
 
-export default SearchTitle;
+export const SearchTitle = ({ title = 'Rick and Morty'}: SearchTitleProps) => {
+  return <h1 className="text-2xl">Wyszukiwarka postaci {title}</h1>;
+}
+
